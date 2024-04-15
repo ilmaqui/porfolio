@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets'
+
+import handIllustration from '../assets/hand-illustration.webp'
+---
+
+<div class="max-w-2xl space-y-4 text-pretty text-gray-800">
+	<p>
+		Me llamo Ilia Maquilón Pérez y soy un <strong class="text-pink-500"
+			>apasionado de la informática</strong
+		>. Desde muy pequeño he vivido rodeado de ordenadores y pasaba la mayoría del tiempo mirando a
+		una pantalla. Siempre me han gustado mucho los videojuegos y es por ello que empecé a indagar
+		cómo se construían aquellos juegos a los cuales adoraba.
+	</p>
+	<div class="align-text-center grid gap-8 md:grid-cols-2">
+		<p>
+			Fue en ese entonces que descubrí el mundo de la programación y me enamoré de él. Desde ese día <strong
+				class="text-pink-500"
+				>no he parado de aprender y mejorar mis habilidades como programador, ya sea con nuevas
+				tecnologías o nuevos lenguajes</strong
+			>. Todo me parece un reto que debo superar.
+		</p>
+		<blockquote class="mb-3">
+			<p class="text-2xl font-semibold italic text-gray-900">
+				"Ilia es un gran profesional con un talento innato para la programación. Es un placer
+				trabajar con él."
+			</p>
+		</blockquote>
+	</div>
+	<p>
+		<strong class="text-pink-500"
+			>Poseo una sólida habilidad en programación, respaldada por mi experiencia y los elogios de
+			mis colegas y mentores</strong
+		>. Disfruto enfrentando desafíos complejos y encontrando soluciones innovadoras en el mundo de
+		la programación. Mi pasión por aprender y mi capacidad para resolver problemas me han permitido
+		destacarme en este campo.
+	</p>
+	<Image
+		loading="eager"
+		class="absolute -bottom-4 right-8 hidden lg:block lg:w-1/4"
+		src={handIllustration}
+		alt="Hand illustration"
+	/>
+</div>
