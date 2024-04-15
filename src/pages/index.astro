@@ -11,10 +11,11 @@ import AboutMe from '../components/AboutMe.astro'
 
 <Layout
 	title="Portfolio de Ilia - Desarrollador y Programador Web con 2 años de experiencia"
-	description="Contrata a Ilia para crear tu aplicación web o móvil. Desarrollador Web."
->
+	description="Contrata a Ilia para crear tu aplicación web o móvil. Desarrollador Web.">
 	<main>
-		<SectionContainer id="inicio" className="py-16 md:py-36">
+		<SectionContainer
+			id="inicio"
+			className="py-16 md:py-36">
 			<Hero />
 		</SectionContainer>
 		<div class="space-y-24">
@@ -31,14 +32,6 @@ import AboutMe from '../components/AboutMe.astro'
 						>
 					</h2>
 					<Experience />
-				</GlassContainer>
-			</SectionContainer>
-			<SectionContainer id="proyectos">
-				<GlassContainer
-					><h2 class="relative mb-16 inline-block text-3xl font-semibold">
-						Proyectos<span class="absolute -right-3 bottom-0 text-5xl text-pink-500">.</span>
-					</h2>
-					<Projects />
 				</GlassContainer>
 			</SectionContainer>
 			<SectionContainer id="sobre-mi">
