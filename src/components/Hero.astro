@@ -1,0 +1,93 @@
+---
+import portrait from '../assets/ilia.webp'
+import { Image } from 'astro:assets'
+import textGradient from '../assets/text-gradient.webp'
+import Download from '../icons/Download.astro'
+import Mail from '../icons/Mail.astro'
+import SocialPill from '../components/SocialPill.astro'
+import cv from '../assets/Curriculum-Ilia-Maquilon.pdf'
+import NextJs from '../icons/NextJs.astro'
+import Angular from '../icons/Angular.astro'
+import TechnologyBadge from '../components/TechnologyBadge.astro'
+import Spring from '../icons/Spring.astro'
+import AstroIcon from '../icons/AstroIcon.astro'
+import Laravel from '../icons/Laravel.astro'
+import React from '../icons/React.astro'
+import Tailwind from '../icons/Tailwind.astro'
+import Wordpress from '../icons/Wordpress.astro'
+const TECHNOLOGIES = [
+	{ name: 'Next.js', className: 'bg-black/25 text-white', Icon: NextJs },
+	{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular },
+	{ name: 'Spring', className: 'bg-[#3b6f26]/25 text-white', Icon: Spring },
+	{ name: 'Laravel', className: 'bg-[#7d1710]/25 text-white', Icon: Laravel },
+	{
+		name: 'Tailwind CSS',
+		className: 'bg-[#2bb1ec]/50 text-white',
+		Icon: Tailwind
+	},
+	{ name: 'React', className: 'bg-[#06303d]/40 text-white', Icon: React },
+	{ name: 'Astro', className: 'bg-[#953600]/25 text-white', Icon: AstroIcon },
+	{
+		name: 'Wordpress',
+		className: 'bg-[#124055]/25 text-white',
+		Icon: Wordpress
+	}
+]
+---
+
+<div class="max-w-2xl p-8 md:p-12">
+	<div class="mb-2 flex items-center gap-4">
+		<Image
+			src={portrait}
+			loading="eager"
+			class="size-32 rounded-full shadow-lg md:size-16"
+			alt="Ilia Maquilón"
+		/>
+		<div class="flex flex-wrap items-center gap-2">
+			{TECHNOLOGIES.map((tech) => <TechnologyBadge {...tech} />)}
+		</div>
+	</div>
+
+	<a
+		target="_blank"
+		href="https://www.linkedin.com/in/imaquilo/"
+		class="mb-4 inline-flex items-center rounded-full bg-pink-100/50 px-2.5 py-1 text-sm font-medium text-pink-600">
+		<span class="relative me-2 flex size-2">
+			<span
+				class="absolute inline-flex h-full w-full animate-ping rounded-full bg-pink-400 opacity-75"
+			></span>
+			<span class="relative size-2 rounded-full bg-pink-500"></span>
+		</span>
+		Disponible para trabajar
+	</a>
+	<h1 class="mb-6 text-5xl font-bold">
+		Hola, me llamo <span
+			style={`background-image: url(${textGradient.src});`}
+			class="text-gradient bg-clip-text font-extrabold text-transparent"
+			>Ilia.</span
+		>
+	</h1>
+	<p class="mb-8 text-pretty text-xl font-semibold text-gray-800">
+		<strong class="bg-gradient-to-r from-pink-500 to-violet-800 bg-clip-text text-transparent"
+			>Desarrollador web</strong
+		> de Murcia, España. Más de 2 años de experiencia en frontend y backend. Explora mi portfolio para
+		ver cómo convierto ideas en soluciones web innovadoras.
+	</p>
+	<nav>
+		<ul class="flex flex-wrap gap-4">
+			<li>
+				<SocialPill
+					href={cv}
+					download="Curriculum-Ilia-Maquilon"
+					}>
+					<Download class="size-4" />Descargar cv
+				</SocialPill>
+			</li>
+			<li>
+				<SocialPill href="mailto:iliaqui.pe@gmail.com">
+					<Mail class="size-4" />iliaqui.pe@gmail.com
+				</SocialPill>
+			</li>
+		</ul>
+	</nav>
+</div>

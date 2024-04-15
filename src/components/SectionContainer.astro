@@ -1,0 +1,18 @@
+---
+interface Props {
+	className?: string
+	id: string
+}
+
+const { className, id } = Astro.props
+---
+
+<section
+	id={id}
+	class:list={[
+		'container relative mx-auto flex max-w-xl scroll-m-24 items-center md:max-w-2xl lg:max-w-6xl',
+		className
+	]}
+>
+	<slot />
+</section>

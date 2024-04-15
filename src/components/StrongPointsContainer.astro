@@ -1,0 +1,40 @@
+---
+import Volume from '../icons/Volume.astro'
+import Notebook from '../icons/Notebook.astro'
+import Bulb from '../icons/Bulb.astro'
+
+const STRONG_POINTS = [
+	{
+		title: 'Comunicativo',
+		description:
+			'Me gusta comunicar y compartir conocimientos con los demás. Siempre estoy dispuesto a ayudar y aportar mi granito de arena.',
+		icon: Volume
+	},
+	{
+		title: 'Proactivo',
+		description:
+			'Me gusta tomar la iniciativa y no esperar a que las cosas sucedan. Siempre estoy buscando maneras de mejorar y optimizar procesos.',
+		icon: Bulb
+	},
+	{
+		title: 'Autodidacta',
+		description:
+			'Me gusta aprender cosas nuevas y estar al día en las últimas tecnologías. Siempre estoy buscando maneras de mejorar y optimizar procesos.',
+		icon: Notebook
+	}
+]
+---
+
+<div class="grid gap-8 lg:grid-cols-3">
+	{
+		STRONG_POINTS.map((point, index) => (
+			<div class:list={[index != STRONG_POINTS.length - 1 && 'border-gray-400 pr-8 lg:border-r-2']}>
+				<div class="mb-6 flex items-center gap-2">
+					<point.icon class="size-8 text-pink-500" />
+					<h3 class="text-2xl font-bold">{point.title}</h3>
+				</div>
+				<p class="text-gray-600">{point.description}</p>
+			</div>
+		))
+	}
+</div>

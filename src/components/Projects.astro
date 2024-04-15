@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets'
+import TodoistImage from '../assets/todoist.webp'
+import AppleImage from '../assets/apple.webp'
+import NextJs from '../icons/NextJs.astro'
+import Angular from '../icons/Angular.astro'
+import Spring from '../icons/Spring.astro'
+import Tailwind from '../icons/Tailwind.astro'
+import TechnologyBadge from './TechnologyBadge.astro'
+import Link from '../icons/Link.astro'
+import ActionButton from './ActionButton.astro'
+import GithubOutline from '../icons/GithubOutline.astro'
+
+const PROJECTS = [
+	{
+		name: 'Apple',
+		description:
+			'Apple es una empresa multinacional estadounidense que diseña y produce equipos electrónicos, software y servicios en línea y es uno de los principales fabricantes de tecnología en el mundo.',
+		image: AppleImage,
+		tech: [
+			{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular },
+			{ name: 'Spring', className: 'bg-[#3b6f26]/25 text-white', Icon: Spring }
+		],
+		links: [
+			{
+				action: 'Demo',
+				url: 'https://apple.es',
+				Icon: Link
+			}
+		]
+	},
+	{
+		name: 'Todoist - Una "to do list" para organizar tu trabajo y tu vida',
+		description:
+			'Todoist es una aplicación de gestión de tareas que ayuda a las personas a organizarse y a colaborar en proyectos. Además, es una de las aplicaciones de productividad más populares del mundo.',
+		image: TodoistImage,
+		tech: [
+			{ name: 'Next.js', className: 'bg-black/25 text-white', Icon: NextJs },
+			{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular },
+			{ name: 'Tailwind CSS', className: 'bg-[#2bb1ec]/50 text-white', Icon: Tailwind }
+		],
+		links: [
+			{
+				action: 'Código',
+				url: 'https://todoist.com',
+				Icon: GithubOutline
+			},
+			{
+				action: 'Demo',
+				url: 'https://todoist.com',
+				Icon: Link
+			}
+		]
+	}
+]
+---
+
+<div class="flex flex-col gap-y-16">
+	{
+		PROJECTS.map((project) => (
+			<article class="group flex flex-col space-x-0 space-y-8 md:flex-row md:space-x-8 md:space-y-0">
+				<div class="relative col-span-6 row-span-5 flex transform flex-col items-center gap-8 overflow-clip rounded-xl shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
+					<Image
+						loading="eager"
+						class="ease-in-outobject-cover h-72 w-full scale-110 rounded-xl object-top shadow-md transition duration-500 md:group-hover:scale-105"
+						src={project.image}
+						alt={project.name}
+					/>
+				</div>
+				<div class="w-full max-w-lg md:w-1/2">
+					<h3 class="mb-2 text-2xl font-bold text-gray-800">{project.name}</h3>
+					<div class="flex flex-col">
+						<div class="mb-4 flex flex-wrap items-center gap-2">
+							{project.tech.map((tech) => (
+								<TechnologyBadge {...tech} />
+							))}
+						</div>
+						<p class="mb-4 text-pretty text-gray-600">{project.description}</p>
+						<footer class="flex gap-2">
+							{project.links && project.links.map((link) => <ActionButton {...link} />)}
+						</footer>
+					</div>
+				</div>
+			</article>
+		))
+	}
+</div>

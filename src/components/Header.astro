@@ -1,0 +1,44 @@
+---
+import GitHub from '../icons/GitHub.astro'
+import LinkedIn from '../icons/LinkedIn.astro'
+import Code from '../icons/Code.astro'
+---
+
+<nav
+	id="menu"
+	class="fixed z-10 w-full bg-opacity-25 p-4 transition">
+	<div class="container mx-auto flex items-center justify-between">
+		<div class="flex items-center">
+			<Code class="mr-2 size-8 text-pink-500" />
+			<span class="relative text-2xl font-extrabold"
+				>Ilia M<span class="absolute -right-3 bottom-0 text-4xl text-pink-500">.</span></span
+			>
+		</div>
+		<div class="flex items-center space-x-4 font-bold">
+			<a
+				href="#experiencia"
+				class="p-2 hover:text-pink-500"
+				>Experiencia</a
+			>
+			<a
+				href="#proyectos"
+				class="p-2 hover:text-pink-500"
+				>Proyectos</a
+			>
+			<a
+				href="https://www.linkedin.com/in/imaquilo/"
+				target="_blank"
+				class="p-2 hover:text-pink-500"
+				aria-label="LinkedIn">
+				<LinkedIn class="size-6" />
+			</a>
+			<a
+				href="https://github.com/your-github-username"
+				target="_blank"
+				class="p-2 hover:text-pink-500"
+				aria-label="GitHub">
+				<GitHub class="size-6" />
+			</a>
+		</div>
+	</div>
+</nav>
