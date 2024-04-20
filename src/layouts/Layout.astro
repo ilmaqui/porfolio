@@ -16,19 +16,36 @@ const { title, description } = Astro.props
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content={description}
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/favicon.svg"
+		/>
+		<meta
+			name="generator"
+			content={Astro.generator}
+		/>
 		<title>{title}</title>
 		<script
 			src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
 			integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-			crossorigin="anonymous"></script>
+			crossorigin="anonymous"
+		></script>
 		<ViewTransitions />
 	</head>
 	<body>
-		<canvas id="gradient-canvas" data-transition-in></canvas>
+		<canvas
+			id="gradient-canvas"
+			data-transition-in
+		></canvas>
 		<Header />
 		<slot />
 		<Footer />
