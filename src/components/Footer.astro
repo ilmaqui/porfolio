@@ -1,6 +1,43 @@
+---
+import AstroIcon from '../icons/AstroIcon.astro'
+import Code from '../icons/Code.astro'
+import GitHub from '../icons/GitHub.astro'
+import Tailwind from '../icons/Tailwind.astro'
+---
+
 <footer
-	class="px-auto container m-4 mx-auto mb-10 mt-16 flex w-full justify-end space-x-4 px-8 text-sm font-medium text-gray-600 opacity-80 md:max-w-2xl lg:max-w-6xl lg:px-12"
->
-	<a class="hover:underline" href="mailto:iliaqui.pe@gmail.com">Contacto</a>
-	<a class="hover:underline" href="#inicio">Volver arriba</a>
+	class="px-auto container m-4 mx-auto mt-16 mb-10 w-full px-8 text-sm font-medium text-gray-600 opacity-80 md:max-w-2xl lg:max-w-6xl lg:px-12">
+	<div class="flex items-center justify-between">
+		<div class="hidden items-center md:flex">
+			<Code class="mr-2 size-8 text-pink-500" />
+			<span class="relative text-2xl font-extrabold"
+				>Ilia M<span class="absolute -right-3 bottom-0 text-4xl text-pink-500">.</span></span
+			>
+		</div>
+		<div class="flex justify-center space-x-6">
+			<div>
+				<div class="flex items-center space-x-3">
+					<span>Built with</span><AstroIcon class="size-6" /><span>Astro</span>
+				</div>
+				<div class="flex items-center space-x-3">
+					<span>Styled with</span><Tailwind class="size-6" /><span>Tailwindcss</span>
+				</div>
+				<div class="flex items-center space-x-3">
+					<span>Deployed on</span><GitHub class="size-6" /><span>Github Pages</span>
+				</div>
+			</div>
+		</div>
+		<div class="flex space-x-4">
+			<a
+				class="hover:underline"
+				href="mailto:iliaqui.pe@gmail.com"
+				>Contacto</a
+			>
+			<a
+				class="hover:underline"
+				href="#inicio"
+				>Volver arriba</a
+			>
+		</div>
+	</div>
 </footer>
