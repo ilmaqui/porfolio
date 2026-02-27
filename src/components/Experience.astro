@@ -1,46 +1,6 @@
 ---
 import ExperienceItem from './ExperienceItem.astro'
-import Angular from '../icons/Angular.astro'
-import Spring from '../icons/Spring.astro'
-import Php from '../icons/Php.astro'
-import Symfony from '../icons/Symfony.astro'
-import Wordpress from '../icons/Wordpress.astro'
-
-const EXPERIENCE = [
-	{
-		title: 'Desarrollador Frontend',
-		company: 'Better Consultants',
-		time: 'Julio 2024 - Actualidad',
-		description:
-			'Desarrollo de aplicaciones angular en sistema microfrontal. Desarrollo de componentes reutilizables y mantenimiento de aplicaciones ya existentes. Implementación de nuevas funcionalidades y corrección de errores.',
-		link: '#',
-		tech: [{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular }]
-	},
-	{
-		title: 'Centers Developer',
-		company: 'NTT Data',
-		time: 'Noviembre 2021 - Enero 2024',
-		description:
-			'Desarrollo y mantenimiento de soluciones innovadoras en el proyecto de la Junta de Andalucía del litoral andaluz. Análisis de tareas, revisiones de soluciones y resolución de incidencias asegurando una alta calidad de código.',
-		link: '#',
-		tech: [
-			{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular },
-			{ name: 'Spring', className: 'bg-[#3b6f26]/25 text-white', Icon: Spring }
-		]
-	},
-	{
-		title: 'Desarrollador backend',
-		company: 'Intelia',
-		time: 'Prácticas',
-		description:
-			'Desarrollo de un plugin de wordpress que sincronizaba los productos de una CDP (Customer Data Platform) con su tienda online. Este plugin también permitía un sistema de fidelización y un sistema de recomendaciones de productos basados en IA y con productos que el cliente podía preestablecer a través de la CDP',
-		tech: [
-			{ name: 'Symfony', className: 'bg-black/25 text-white', Icon: Symfony },
-			{ name: 'Php', className: 'bg-[#484b73]/25 text-white', Icon: Php },
-			{ name: 'Wordpress', className: 'bg-[#124055]/25 text-white', Icon: Wordpress }
-		]
-	}
-]
+import { EXPERIENCE } from '../core/constants'
 ---
 
 <ol class="relative ml-1.5 space-y-10 border-s border-gray-400 pb-10">
