@@ -2,11 +2,12 @@
 import { Image } from 'astro:assets'
 
 import handIllustration from '../assets/hand-illustration.webp'
+const edad = new Date().getFullYear() - 2001
 ---
 
 <div class="max-w-lg space-y-4 text-pretty text-gray-800 lg:max-w-xl xl:max-w-2xl">
 	<p>
-		Me llamo Ilia Maquilón Pérez y tengo 22 años. Estudié un <strong class="text-pink-500"
+		Me llamo Ilia Maquilón Pérez y tengo {edad} años. Estudié un <strong class="text-pink-500"
 			>Grado Superior de Desarrollo de Aplicaciones Web</strong
 		>. Desde los 16 años me encanta desarrollar páginas webs con mi toque personal e investigar cómo
 		se hacen o que diseños usan las empresas TOP del mercado.
@@ -23,7 +24,7 @@ import handIllustration from '../assets/hand-illustration.webp'
 			</p>
 		</div>
 		<blockquote class="mb-3">
-			<p class="text-2xl font-semibold italic text-gray-900">
+			<p class="text-2xl font-semibold text-gray-900 italic">
 				"Ilia es un gran profesional con un talento innato para la programación. Es un placer
 				trabajar con él."
 			</p>
@@ -35,7 +36,7 @@ import handIllustration from '../assets/hand-illustration.webp'
 	</p>
 	<Image
 		loading="eager"
-		class="absolute -bottom-4 right-8 hidden lg:block lg:w-1/4"
+		class="absolute right-8 -bottom-4 hidden lg:block lg:w-1/4"
 		src={handIllustration}
 		alt="Hand illustration"
 	/>

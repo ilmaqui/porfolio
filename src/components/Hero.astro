@@ -15,6 +15,8 @@ import Laravel from '../icons/Laravel.astro'
 import React from '../icons/React.astro'
 import Tailwind from '../icons/Tailwind.astro'
 import Wordpress from '../icons/Wordpress.astro'
+import { YEARS_OF_EXPERIENCE } from '../core/constants'
+
 const TECHNOLOGIES = [
 	{ name: 'Next.js', className: 'bg-black/25 text-white', Icon: NextJs },
 	{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular },
@@ -67,10 +69,10 @@ const TECHNOLOGIES = [
 			>Ilia.</span
 		>
 	</h1>
-	<p class="mb-8 text-pretty text-xl font-semibold text-gray-800">
+	<p class="mb-8 text-xl font-semibold text-pretty text-gray-800">
 		<strong class="bg-linear-to-r from-pink-500 to-violet-800 bg-clip-text text-transparent"
 			>Desarrollador web</strong
-		> de Murcia, España. Más de 2 años de experiencia en frontend y backend. Explora mi porfolio para
+		> de Murcia, España. {YEARS_OF_EXPERIENCE} años de experiencia en frontend. Explora mi porfolio para
 		ver cómo convierto ideas en soluciones web innovadoras.
 	</p>
 	<nav>
