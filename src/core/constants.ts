@@ -47,12 +47,16 @@ export const EXPERIENCE = [
 ]
 
 // Calcula los años de experiencia basandote en los empleos listados
-export const YEARS_OF_EXPERIENCE = EXPERIENCE.reduce((total, experience) => {
-	const start = experience.startDate
-	const end = experience.endDate
-	if (!start || !end) return total
+export const YEARS_OF_EXPERIENCE = Math.round(
+	EXPERIENCE.reduce((totalMonths, experience) => {
+		const start = experience.startDate
+		const end = experience.endDate
+		if (!start || !end) return totalMonths
 
-	const years =
-		end.getFullYear() - start.getFullYear() - (end.getMonth() < start.getMonth() ? 1 : 0)
-	return total + years
-}, 0)
+		const months =
+			(end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth())
+		return totalMonths + months
+	}, 0) / 12
+)
+
+console.log('Años de experiencia:', YEARS_OF_EXPERIENCE)
