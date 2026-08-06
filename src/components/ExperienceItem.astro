@@ -31,10 +31,10 @@ const { title, company, description, time, tech, hidePoint: showPoint } = Astro.
 				</div>
 			</div>
 			<div class="mb-2 space-y-2">
-				<time class="text-sm font-normal leading-none text-gray-400">{time}</time>
+				<time class="text-sm leading-none font-normal text-gray-400">{time}</time>
 				{
 					tech && (
-						<div class="-ml-2 flex flex-wrap items-center gap-2">
+						<div class="flex flex-wrap items-center gap-2">
 							{tech.map((tech) => (
 								<TechnologyBadge {...tech} />
 							))}

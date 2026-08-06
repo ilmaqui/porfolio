@@ -1,7 +1,7 @@
 ---
-import '@fontsource-variable/onest'
+import '@fontsource-variable/onest/index.css'
 import Header from '../components/Header.astro'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 
@@ -40,7 +40,7 @@ const { title, description } = Astro.props
 			integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
 			crossorigin="anonymous"
 		></script>
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body>
 		<canvas
