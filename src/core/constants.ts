@@ -14,7 +14,10 @@ export const EXPERIENCE = [
 		description:
 			'Desarrollo de aplicaciones angular en sistema microfrontal. Desarrollo de componentes reutilizables y mantenimiento de aplicaciones ya existentes. Implementación de nuevas funcionalidades y corrección de errores.',
 		link: '#',
-		tech: [{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular }]
+		tech: [
+			{ name: 'Angular', className: 'bg-[#750f2f]/25 text-white', Icon: Angular },
+			{ name: 'Spring', className: 'bg-[#3b6f26]/25 text-white', Icon: Spring }			
+		]
 	},
 	{
 		title: 'Centers Developer',
@@ -58,5 +61,3 @@ export const YEARS_OF_EXPERIENCE = Math.round(
 		return totalMonths + months
 	}, 0) / 12
 )
-
-console.log('Años de experiencia:', YEARS_OF_EXPERIENCE)
